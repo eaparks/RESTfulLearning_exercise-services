@@ -10,12 +10,13 @@ This is my exercise code from Pluralsight course:
 Uses Jersey. Visit <a href="http://jersey.java.net">Project Jersey website</a>
                  for more information on Jersey!
 
-
-`DELETE`
-    Like PUT, not supported in early browsers
-    url example:
+###`DELETE`
+###`DELETE`
+###`DELETE`
+-Like PUT, not supported in early browsers
+-url example:  
         http://localhost:8080/exercise-services/webapi/activities/1234
-    Careful! - can be recursive
-    Idempotent (can call repeatedly without messing anything up)
+-**Careful!** - can be recursive
+-Idempotent (can call repeatedly without messing anything up)
     
 
