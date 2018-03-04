@@ -10,6 +10,16 @@ import static org.junit.Assert.assertNotNull;
 public class ActivityClientTest {
 
     @Test
+    public void delete() {
+
+        System.out.println("Hello EDWARD!!!");
+
+        ActivityClient client = new ActivityClient();
+
+        client.delete("8765");
+    }
+
+    @Test
     public void put() {
 
         Activity activity = new Activity();

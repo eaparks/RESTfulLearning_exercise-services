@@ -20,8 +20,24 @@ public class ActivityClient {
         client = ClientBuilder.newClient();
     }
 
+    public void delete(String activityId) {
+
+        // TODO - init target above, so we don't keep creating
+        WebTarget target = client.target("http://localhost:8080/exercise-services/webapi/");
+
+        Response response = target.path("activities/" + activityId)
+                .request(MediaType.APPLICATION_JSON)
+                .delete();
+
+        if(response.getStatus() != 200) {
+            throw new RuntimeException(response.getStatus() + ": There was an error on server during delete.");
+        }
+
+    }
+
     public Activity get(String id) {
 
+		//http://localhost:8080/exercise-services/webapi/activities/1234
         WebTarget target = client.target("http://localhost:8080/exercise-services/webapi/");
 
         Response response = target.path("activities/" + id).request(MediaType.APPLICATION_JSON).get(Response.class);
@@ -36,14 +52,14 @@ public class ActivityClient {
 
         WebTarget target = client.target("http://localhost:8080/exercise-services/webapi/");
 
-        List<Activity> response = target.path("activities").request(MediaType.APPLICATION_JSON_TYPE).
+        List<Activity> response = target.path("activities").request(MediaType.APPLICATION_JSON).
                 get(new GenericType<List<Activity>>(){});
 
         return response;
     }
 
     public Activity create(Activity activity) {
-
+		//http://localhost:8080/exercise-services/webapi/activities/activity
         WebTarget target = client.target("http://localhost:8080/exercise-services/webapi/");
 
         Response response = target.path("activities/activity")
@@ -71,4 +87,7 @@ public class ActivityClient {
 
         return response.readEntity(Activity.class);
     }
+
+
+
 }

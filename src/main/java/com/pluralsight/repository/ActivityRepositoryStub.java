@@ -65,4 +65,12 @@ public class ActivityRepositoryStub implements ActivityRepository {
         return updatedActivity;
     }
 
+    @Override
+    public void delete(String activityId) {
+
+        System.out.println("activityId in delete method is: " + activityId);
+        // delete from activity where activityId = ?
+    }
+
+
 }
