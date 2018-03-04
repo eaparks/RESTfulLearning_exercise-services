@@ -1,4 +1,4 @@
-#Time for REST-fresher course.
+# Time for REST-fresher course.
 
 This is my exercise code from Pluralsight course:
     https://app.pluralsight.com/library/courses/restful-services-java-using-jersey/table-of-contents
