@@ -1,6 +1,7 @@
 package com.pluralsight.repository;
 
 import com.pluralsight.model.Activity;
+import com.pluralsight.model.ActivitySearch;
 import com.pluralsight.model.User;
 
 import java.util.ArrayList;
@@ -72,5 +73,39 @@ public class ActivityRepositoryStub implements ActivityRepository {
         // delete from activity where activityId = ?
     }
 
+    @Override
+    public List<Activity> findByDescription(List<String> descriptions, int durationFrom, int durationTo) {
+
+        // select * from activities
+        // where description in (?,?,?)
+        // and duration > ? and duration < ?
+
+        Activity activity = new Activity();
+        activity.setDescription("running");
+        activity.setDuration(10);
+        activity.setId("2345");
+
+        List<Activity> activities = new ArrayList<>();
+        activities.add(activity);
+
+        return activities;
+    }
+
+    @Override
+    public List<Activity> findByConstraints(ActivitySearch search) {
+
+        System.out.println(search.getDurationFrom());
+        System.out.println(search.getSearchType());
+
+        Activity activity = new Activity();
+        activity.setDescription("running");
+        activity.setDuration(10);
+        activity.setId("2345");
+
+        List<Activity> activities = new ArrayList<>();
+        activities.add(activity);
+
+        return activities;
+    }
 
 }

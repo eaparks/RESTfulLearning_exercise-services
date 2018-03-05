@@ -24,6 +24,7 @@ public class ActivitySearchClient {
 	}
 	
 	public List<Activity> search(ActivitySearch search) {
+
 		URI uri = UriBuilder.fromUri("http://localhost:8080/exercise-services/webapi")
 				.path("search/activities")
 				.build();
