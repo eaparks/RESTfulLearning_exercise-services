@@ -6,8 +6,8 @@ This is my exercise code from Pluralsight course:
 ## TODO:
     1. check out `PATCH` - new to JAX since ??
     2. [Spring Fundamentals](http://pluralsight.com/training/Courses/TableOfContents/spring-fundamentals)
-    3. [Spring JPA with Hibernate](http://pluralsight.com/training/Courses/TableOfContents/spring-jpa-hibernate)
-    3. [Spring MVC](http://pluralsight.com/training/Courses/TableOfContents/springmvc-intro)
+    3. [Spring JPA with Hibernate](http://pluralsight.com/training/Courses/TableOfContents/spring-jpa-hibernate)  
+    4. [Spring MVC](http://pluralsight.com/training/Courses/TableOfContents/springmvc-intro)
     
 Uses Jersey. Visit <a href="http://jersey.java.net">Project Jersey website</a>
                  for more information on Jersey!
